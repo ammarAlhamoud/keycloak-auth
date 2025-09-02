@@ -1,0 +1,8 @@
+@if ( show() ) {
+<div class="banner">
+  <!-- Time Bar  -->
+  <div class="bar" [style.width.%]="(remaining() / TOKEN_TIMEOUT_MS) * 100">
+    <span class="timer"> {{ remaining() | mmss }}</span>
+  </div>
+</div>
+}

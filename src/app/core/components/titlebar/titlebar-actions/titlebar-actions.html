@@ -1,0 +1,8 @@
+<div class="titlebar-actions">
+  <!-- Nur wer Schilder schreiben darf -->
+  <button [hasRole]="['admin', 'manager', 'user']" (click)="onSignWrite()">Neues Schild</button>
+  <!-- Entweder write ODER review reicht -->
+  <button [hasRole]="['admin', 'manager']">Sonderfreigabe</button>
+
+  <ng-content></ng-content>
+</div>

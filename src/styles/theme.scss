@@ -1,0 +1,85 @@
+@use 'colors';
+@use 'spacing';
+@use 'typography';
+@use 'mixins';
+@use 'elevation';
+@use 'utilities';
+@import 'theme.light';
+@import 'theme.dark';
+
+/* Base Reset (leicht) */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background: var(--btn-bg-hover);
+}
+button:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem;
+  @include elevation.elevation(1);
+}
+
+[data-theme='dark'] .card {
+  @include elevation.elevation(2);
+}
+
+.banner {
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  height: 2rem;
+  width: 10rem;
+
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-warning);
+    border-radius: 10px;
+    height: 100%;
+    background-color: var(--color-warning);
+
+    .timer {
+      font-weight: bold;
+    }
+  }
+}

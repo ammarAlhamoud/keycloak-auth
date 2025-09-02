@@ -1,0 +1,88 @@
+/* Einstiegspunkt globale Styles
+   Nutzung der modularen Theme-Architektur aus /src/styles/
+   Hinweis:
+   - Alle Design-Tokens + Themes liegen in: src/styles/
+   - Komponentenspezifische Overrides unterhalb dieses Blocks ergänzen
+*/
+
+/* Core Tokens & Utilities (werden nur einmal kompiliert) */
+@use 'styles/colors';
+@use 'styles/spacing';
+@use 'styles/typography';
+@use 'styles/mixins';
+@use 'styles/elevation';
+@use 'styles/utilities';
+
+/* Light & Dark Theme Custom Properties */
+@import 'styles/theme.light';
+@import 'styles/theme.dark';
+
+/* Base Layer */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  min-height: 100dvh;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  transition: background-color 0.2s;
+}
+button:hover {
+  background: var(--btn-bg-hover);
+}
+button:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem;
+  @include elevation.elevation(1);
+}
+[data-theme='dark'] .card {
+  @include elevation.elevation(2);
+}
+
+/* Utility Beispiel (Stack) – optional */
+.stack {
+  display: flex;
+  flex-direction: column;
+  > * + * {
+    margin-top: spacing.$space-4;
+  }
+}
+
+/* Platz für projekt-spezifische Overrides / Komponenten-Anpassungen */
+// z.B. Auth-Form Styles:
+// .auth-form { max-width: 420px; margin: 2rem auto; }

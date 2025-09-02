@@ -1,0 +1,12 @@
+.titlebar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+
+  button {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,30 @@
+// Grund-Paletten (raw)
+$blue-50: #e8f1ff;
+$blue-100: #c2dcff;
+$blue-500: #1976d2;
+$blue-600: #1562ad;
+$blue-700: #0f4b82;
+
+$gray-50: #f8f9fa;
+$gray-100: #f1f3f5;
+$gray-200: #e5e7eb;
+$gray-300: #d0d4d9;
+$gray-500: #6b7280;
+$gray-600: #4b5563;
+$gray-700: #374151;
+$gray-800: #1f2933;
+$gray-900: #111827;
+
+$green-500: #2e7d32;
+$red-500: #d32f2f;
+$orange-500: #ed6c02;
+
+// Semantische Tokens (SCSS Variablen als Fallback für ältere Mixins)
+$color-primary: $blue-500;
+$color-primary-contrast: #ffffff;
+$color-accent: $green-500;
+$color-warn: $red-500;
+$color-info: $blue-500;
+$color-success: $green-500;
+$color-error: $red-500;
+$color-warning: $orange-500;

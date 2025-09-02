@@ -1,0 +1,12 @@
+<main class="main">
+  <app-titlebar>
+    <div class="titlebar-right" right>
+      <app-inactivity-banner />
+      <button (click)="toggleTheme()">
+        Theme: {{ themeService.theme === 'light' ? '🌞' : '🌙' }}
+      </button>
+      <button class="logout-button" (click)="logout()">Logout</button>
+    </div>
+  </app-titlebar>
+  <router-outlet />
+</main>

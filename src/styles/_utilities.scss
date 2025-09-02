@@ -1,0 +1,15 @@
+.u-flex {
+  display: flex;
+}
+.u-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.u-hidden {
+  display: none !important;
+}
+
+[data-theme-transition] {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}

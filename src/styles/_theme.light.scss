@@ -1,0 +1,37 @@
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  /* Surface */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f7fa;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+
+  /* Text */
+  --color-text: #1f2933;
+  --color-text-soft: #4b5563;
+  --color-text-invert: #ffffff;
+
+  /* Brand / Semantic */
+  --color-primary: #1976d2;
+  --color-primary-hover: #1562ad;
+  --color-accent: #2e7d32;
+  --color-warn: #d32f2f;
+  --color-info: #1976d2;
+  --color-success: #2e7d32;
+  --color-error: #d32f2f;
+  --color-warning: #ed6c02;
+
+  /* States */
+  --color-focus: #1976d2;
+  --color-link: #1562ad;
+
+  /* Elevation overlays (not needed light) */
+  --overlay-strength: 0;
+
+  /* Components */
+  --btn-bg: var(--color-primary);
+  --btn-bg-hover: var(--color-primary-hover);
+  --btn-color: #ffffff;
+}

@@ -1,0 +1,15 @@
+<div class="titlebar-container">
+  <div class="titlebar">
+    <section class="titlebar__section left-side">
+      <h1>{{ title() }}</h1>
+      <ng-content select="[left]"></ng-content>
+    </section>
+    <section class="titlebar__section right-side">
+      <ng-content select="[right]"></ng-content>
+      <span class="greeting"><strong>Hello </strong> {{ authService.userFullName() }}</span>
+    </section>
+  </div>
+</div>
+<div class="titlebar-actions">
+  <app-titlebar-actions></app-titlebar-actions>
+</div>
