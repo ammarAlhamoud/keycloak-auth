@@ -115,6 +115,9 @@ Identitäten/Benutzerverwaltung liegen **vollständig in Keycloak**; Domänenent
 - ✅ Realm‑Rollen angelegt: `admin`, `manager`, `user`, `watcher`
 - ✅ Gruppen angelegt + den Rollen zugeordnet (Admins, Managers, Users, Watchers)
 - ✅ Benutzer angelegt (je Gruppe ein Test‑User)
+- Sprint 1:
+1. ✅ Keycloak: Client `traffic-api` + Client‑Rollen anlegen, Gruppen‑Mappings setzen
+2. ✅ Angular: Helper `hasClientRole`, Route Guard, Directive `*hasClientRole`
 
 ---
 
