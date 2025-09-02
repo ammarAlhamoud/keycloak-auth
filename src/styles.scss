@@ -14,8 +14,8 @@
 @use 'styles/utilities';
 
 /* Light & Dark Theme Custom Properties */
-@import 'styles/theme.light';
-@import 'styles/theme.dark';
+@use 'styles/theme.light' as light;
+@use 'styles/theme.dark' as dark;
 
 /* Base Layer */
 * {

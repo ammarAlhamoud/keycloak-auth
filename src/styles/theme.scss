@@ -4,8 +4,8 @@
 @use 'mixins';
 @use 'elevation';
 @use 'utilities';
-@import 'theme.light';
-@import 'theme.dark';
+@use 'theme.light' as light;
+@use 'theme.dark' as dark;
 
 /* Base Reset (leicht) */
 * {
